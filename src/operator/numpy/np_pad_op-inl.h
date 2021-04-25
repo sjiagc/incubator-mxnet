@@ -79,7 +79,7 @@ struct NumpyPadParam : public dmlc::Parameter<NumpyPadParam> {
   DMLC_DECLARE_PARAMETER(NumpyPadParam) {
     DMLC_DECLARE_FIELD(pad_width)
         .describe("Number of values padded to the edges of each axis. "
-                  "((before_1, after_1), … (before_N,"
+                  "((before_1, after_1), ... (before_N,"
                   "after_N)) unique pad widths for each axis. ((before, after),) "
                   "yields same before and"
                   "after pad for each axis. "
@@ -107,7 +107,7 @@ struct NumpyPadParam : public dmlc::Parameter<NumpyPadParam> {
             "vector along each axis.");
     DMLC_DECLARE_FIELD(constant_value)
         .set_default(0.0)
-        .describe("Used in ‘constant’. The values to set the padded values for each axis."
+        .describe("Used in 'constant'. The values to set the padded values for each axis."
                   "((before_1, after_1), ... (before_N, after_N)) unique pad constants for"
                   "each axis."
                   "((before, after),) yields same before and after constants for each axis."
@@ -116,9 +116,9 @@ struct NumpyPadParam : public dmlc::Parameter<NumpyPadParam> {
                   "Default is 0.");
     DMLC_DECLARE_FIELD(reflect_type)
         .set_default("even")
-        .describe("Used in ‘reflect’, and ‘symmetric’. "
-                  "The ‘even’ style is the default with an unaltered reflection around "
-                  "the edge value. For the ‘odd’ style,"
+        .describe("Used in 'reflect', and 'symmetric'. "
+                  "The 'even' style is the default with an unaltered reflection around "
+                  "the edge value. For the 'odd' style,"
                   "the extended part of the array is created by subtracting the "
                   "reflected values from two times the edge value.");
   }
